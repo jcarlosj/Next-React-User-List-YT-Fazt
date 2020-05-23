@@ -1,5 +1,5 @@
 /** Components */
-import Navigation from '../components/navigation';
+import Navigation from '../components/Navigation';
 
 /** Page */
 const Home = () => {
