@@ -1,3 +1,6 @@
+/** Next */
+import Router from "next/router";
+
 /** Component */
 const UserListItem = ({ users }) => {
 
@@ -7,7 +10,9 @@ const UserListItem = ({ users }) => {
         users .map( user => (
             <li 
                 key={ user .id }
-                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                style={{ cursor: 'pointer' }}
+                onClick={ event => Router .push( '/users/[id]', `/users/${ user .id }` ) }
             >
                 <div className="data-user">
                     <h4>{ user .first_name } { user .last_name }</h4>
