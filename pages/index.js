@@ -6,9 +6,9 @@ import MainLayout from '../components/layout/Main';
 import UserList from '../components/ui/UserList';
 
 /** Page */
-const Home = ({ data }) => {
+const Home = ({ users }) => {
 
-    console .log( 'Usuarios', data );
+    console .log( 'Home > Usuarios', users );
 
     return (
         <MainLayout>
@@ -16,7 +16,7 @@ const Home = ({ data }) => {
                 <title>NextJS - Home</title>
             </Head>
             <h1>Home</h1>
-            <UserList users={ data } />
+            <UserList users={ users } />
         </MainLayout>
     );
 }
@@ -26,13 +26,13 @@ export async function getServerSideProps() {
 
     try {
         const 
-            response = await fetch( 'https://jsonplaceholder.typicode.com/users' ),
-            data = await response .json();
+            response = await fetch( 'https://reqres.in/api/users' ),
+            JSONData = await response .json();
     
-        console .log( 'Data', data );
+        console .log( 'Data', JSONData );
 
         // Pass data to the page via props
-        return { props: { data } }
+        return { props: { users: JSONData .data } }
 
     } catch ( error ) {
         console .log( 'Ooops!', error );   
