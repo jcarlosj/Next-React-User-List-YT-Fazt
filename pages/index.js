@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 /** Components */
 import MainLayout from '../components/layout/Main';
+import UserList from '../components/ui/UserList';
 
 /** Page */
 const Home = ({ data }) => {
@@ -15,6 +16,7 @@ const Home = ({ data }) => {
                 <title>NextJS - Home</title>
             </Head>
             <h1>Home</h1>
+            <UserList users={ data } />
         </MainLayout>
     );
 }
