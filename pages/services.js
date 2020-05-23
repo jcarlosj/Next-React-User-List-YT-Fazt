@@ -1,12 +1,11 @@
 /** Components */
-import Navigation from '../components/Navigation';
+import MainLayout from '../components/layout/Main';
 
 /** Page */
 const Services = () => ( 
-    <div>
-        <Navigation /> 
+    <MainLayout>
         <h1>Services</h1>
-    </div>
+    </MainLayout>
 );
 
 export default Services;

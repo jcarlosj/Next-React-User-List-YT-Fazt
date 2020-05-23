@@ -1,13 +1,12 @@
 /** Components */
-import Navigation from '../components/Navigation';
+import MainLayout from '../components/layout/Main';
 
 /** Page */
 const Home = () => {
     return (
-        <div>
-            <Navigation /> 
+        <MainLayout>
             <h1>Hola NextJS!</h1>
-        </div>
+        </MainLayout>
     );
 }
 

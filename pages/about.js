@@ -1,13 +1,12 @@
 /** Components */
-import Navigation from '../components/Navigation';
+import MainLayout from '../components/layout/Main';
 
 /** Page */
 const About = () => {
     return (
-        <div>
-            <Navigation /> 
+        <MainLayout>
             <h1>About!</h1>
-        </div>
+        </MainLayout>
     );
 }
 
