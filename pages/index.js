@@ -1,3 +1,6 @@
+/** Next */
+import Head from 'next/head';
+
 /** Components */
 import MainLayout from '../components/layout/Main';
 
@@ -5,7 +8,10 @@ import MainLayout from '../components/layout/Main';
 const Home = () => {
     return (
         <MainLayout>
-            <h1>Hola NextJS!</h1>
+            <Head>
+                <title>NextJS - Home</title>
+            </Head>
+            <h1>Home</h1>
         </MainLayout>
     );
 }
